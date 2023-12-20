@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant CSS Burger</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #60A0FF;
+            font-family: 'Roboto', sans-serif;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 960px;
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Lobster', cursive;
+            font-size: 2.8em;
+            color: #FFD700;
+            margin-bottom: 0.5em;
+        }
+        .text-container {
+            background-color: #FFFFFF;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+            margin: 10px;
+            text-align: center;
+            max-width: 400px;
+        }
+        p {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.1em;
+            color: #333333;
+        }
+        .burger {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 270px;
+            box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
+            padding: 30px 0; /* Added padding on top and bottom */
+        }
+        .burger-component {
+            height: 12px;
+            width: 100%;
+            margin: 3px 0;
+            position: relative;
+            background-color: #FBD6C8;
+            border-radius: 20px;
+        }
+        #top-bun {
+            height: 80px;
+            background-color: peru;
+            border-top-right-radius: 80px;
+            border-top-left-radius: 80px;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #FDD09F, #D4916A);
+        }
+        .sesame {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+        }
+        .sesame:nth-child(1) { top: 15px; left: 20%; }
+        .sesame:nth-child(2) { top: 10px; left: 40%; }
+        .sesame:nth-child(3) { top: 5px; left: 60%; }
+        .sesame:nth-child(4) { top: 10px; right: 40%; }
+        .sesame:nth-child(5) { top: 15px; right: 20%; }
+        .sesame:nth-child(6) { top: 25px; left: 15%; }
+        .sesame:nth-child(7) { top: 30px; left: 35%; }
+        .sesame:nth-child(8) { top: 30px; right: 35%; }
+        .sesame:nth-child(9) { top: 25px; right: 15%; }
+        .sesame:nth-child(10) { top: 35px; left: 50%; }
+
+        #top-lettuce, #bottom-lettuce {
+            background-color: #228B22;
+            background: linear-gradient(to bottom, #76BA1B, #228B22);
+        }
+        #tomato {
+            background-color: #FF6347;
+            background: linear-gradient(to bottom, #FF6347, #C7431B);
+        }
+        #cheese {
+            background-color: #FFD700;
+            background: linear-gradient(to bottom, #FFEC8B, #FFD700);
+        }
+        #pattie {
+            height: 15px;
+            background-color: #8B4513;
+            background: linear-gradient(to bottom, #A0522D, #8B4513);
+        }
+        #bottom-bun {
+            height: 30px;
+            background-color: peru;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            background: linear-gradient(to bottom, #FDD09F, #D4916A);
+        }
+        .order-button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1.25em;
+            font-family: 'Lobster', cursive;
+            color: white;
+            background-color: #ff4500;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+        .order-button:hover {
+            background-color: #e03e00;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Vibrant CSS Burger</h1>
+    <div class="content">
+        <div>
+            <div class="text-container">
+                <p>Welcome to the world of colorful flavors! Our CSS burger is not only a visual treat but also an adventure in web design cuisine. Get ready to feast your eyes!</p>
+            </div>
+            <div class="burger">
+                <div id="top-bun" class="burger-component">
+                    <div class="sesame"></div>
+                    <div class="sesame"></div>
+                    <div class="sesame"></div>
+                    <div class="sesame"></div>
+                    <div class="sesame"></div>
+                    <div class="sesame"></div>
+                    <div class="sesame"></div>
+                    <div class="sesame"></div>
+                    <div class="sesame"></div>
+                    <div class="sesame"></div>
+                </div>
+                <div id="top-lettuce" class="burger-component"></div>
+                <div id="tomato" class="burger-component"></div>
+                <div id="cheese" class="burger-component"></div>
+                <div id="pattie" class="burger-component"></div>
+                <div id="bottom-lettuce" class="burger-component"></div>
+                <div id="bottom-bun" class="burger-component"></div>
+            </div>
+            <div>
+                <button class="order-button" onclick="alert('Your vibrant CSS burger is on its way!')">Order Now</button>
+            </div>
+        </div>
+        <div class="text-container right">
+            <p>Experience the fusion of design and gastronomy with our unique CSS burger. It's more than a meal; it's a masterpiece!</p>
+        </div>
+    </div>
+</body>
+</html>
